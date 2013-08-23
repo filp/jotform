@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     =  JotForm::VERSION
   s.authors     = ["Filipe Dobreira"]
   s.email       = ["dobreira@gmail.com"]
-  s.description = %q{Thin ruby wrapper around the JotForm Developer API}
+  s.description = %q{Ruby wrapper around the JotForm Developer API}
   s.summary     = %q{JotForm API wrapper}
   s.homepage    = "https://github.com/filp/ruby-jotform"
   s.license     = "MIT"
