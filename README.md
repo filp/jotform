@@ -5,6 +5,24 @@ Ruby wrapper for the JotForm developer API
 
 http://api.jotform.com
 
+## Installation:
+
+1. Add the gem to your `Gemfile`
+
+```ruby
+source "https://rubygems.org"
+
+gem "jotform"
+```
+
+2. Install it
+
+```shell
+$ bundle install
+```
+
+3. You're good to go!
+
 ## Example:
 
 (I'll update this once there's some more to show)
