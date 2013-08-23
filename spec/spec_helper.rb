@@ -5,7 +5,8 @@ require "vcr"
 require "jotform"
 
 if ENV["JOTFORM_API_KEY"].nil?
-  raise "Missing JotForm API Key, please set ENV[JOTFORM_API_KEY]"
+  ENV["JOTFORM_API_KEY"] = "o_o"
+  $stderr.puts "Warning: JOTFORM_API_KEY not set, tests not already recorded with VCR may fail."
 end
 
 VCR.configure do |c|
