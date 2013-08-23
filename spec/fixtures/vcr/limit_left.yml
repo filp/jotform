@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.jotform.com/v1/user?apiKey=328f61c4c273a1a15de341e23e31ceab
+    uri: http://api.jotform.com/v1/user?apiKey=<apiKey>
     body:
       encoding: US-ASCII
       string: ''
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 23 Aug 2013 12:31:40 GMT
+      - Fri, 23 Aug 2013 14:04:16 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -31,21 +31,21 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - PHPSESSID=3vlk8pvic72kkfc5c276ec1ec4; path=/
-      - __cfduid=d4963e56c83373d11b894e6efd4b29ce31377261099088; expires=Mon, 23-Dec-2019
+      - PHPSESSID=lk2f18321d5li0o0o1qeuj7nj6; path=/
+      - __cfduid=dcc7564321c379a88b6f1e8bc232099191377266656263; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.jotform.com
       - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
       - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
-      - guest=guest_32344067304043; expires=Mon, 23-Sep-2013 12:31:39 GMT; path=/
+      - guest=guest_32344447019048; expires=Mon, 23-Sep-2013 14:04:16 GMT; path=/
       - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
       - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
-      - theme=tile-black; expires=Mon, 23-Sep-2013 12:31:39 GMT; path=/
+      - theme=tile-black; expires=Mon, 23-Sep-2013 14:04:16 GMT; path=/
       P3p:
       - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
       Expires:
       - Thu, 01 Jan 1970 00:00:01 GMT
       Last-Modified:
-      - Fri, 23 Aug 2013 12:31:39 GMT
+      - Fri, 23 Aug 2013 14:04:16 GMT
       Cache-Control:
       - no-cache
       Pragma:
@@ -57,16 +57,16 @@ http_interactions:
       Access-Control-Allow-Origin:
       - '*'
       Cf-Ray:
-      - a27d22d4074024c
+      - a2859d9a79a048b
     body:
       encoding: UTF-8
       string: '{"responseCode":200,"message":"success","content":{"username":"filp","name":null,"email":"dobreira@gmail.com","website":null,"time_zone":null,"account_type":"http:\/\/api.jotform.com\/system\/plan\/FREE","status":"ACTIVE","created_at":"2013-08-21
-        15:48:42","updated_at":"2013-08-23 07:24:32","usage":"http:\/\/api.jotform.com\/user\/usage","avatarURL":"http:\/\/www.gravatar.com\/avatar\/ab10f7908233dc830c5ece2a02154806?s=50&d=identicon"},"limit-left":989}'
+        15:48:42","updated_at":"2013-08-23 07:24:32","usage":"http:\/\/api.jotform.com\/user\/usage","avatarURL":"http:\/\/www.gravatar.com\/avatar\/ab10f7908233dc830c5ece2a02154806?s=50&d=identicon"},"limit-left":987}'
     http_version: 
-  recorded_at: Fri, 23 Aug 2013 12:31:40 GMT
+  recorded_at: Fri, 23 Aug 2013 14:04:16 GMT
 - request:
     method: get
-    uri: http://api.jotform.com/v1/user?apiKey=328f61c4c273a1a15de341e23e31ceab
+    uri: http://api.jotform.com/v1/user?apiKey=<apiKey>
     body:
       encoding: US-ASCII
       string: ''
@@ -87,7 +87,7 @@ http_interactions:
       Server:
       - cloudflare-nginx
       Date:
-      - Fri, 23 Aug 2013 12:31:41 GMT
+      - Fri, 23 Aug 2013 14:04:17 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -95,21 +95,21 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - PHPSESSID=lrm3gb4s1opevuo63elu9lorn4; path=/
-      - __cfduid=dd66bb75f376fd135fac8c009b452bd001377261100152; expires=Mon, 23-Dec-2019
+      - PHPSESSID=ta6udffi7s47opm2jaan8v49q4; path=/
+      - __cfduid=d3a5d7f59d75ac7f2d63ec8a552957d771377266656999; expires=Mon, 23-Dec-2019
         23:50:00 GMT; path=/; domain=.jotform.com
       - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
       - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
-      - guest=guest_32343095707050; expires=Mon, 23-Sep-2013 12:31:41 GMT; path=/
+      - guest=guest_32343701921042; expires=Mon, 23-Sep-2013 14:04:17 GMT; path=/
       - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
       - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
-      - theme=tile-black; expires=Mon, 23-Sep-2013 12:31:41 GMT; path=/
+      - theme=tile-black; expires=Mon, 23-Sep-2013 14:04:17 GMT; path=/
       P3p:
       - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
       Expires:
       - Thu, 01 Jan 1970 00:00:01 GMT
       Last-Modified:
-      - Fri, 23 Aug 2013 12:31:41 GMT
+      - Fri, 23 Aug 2013 14:04:17 GMT
       Cache-Control:
       - no-cache
       Pragma:
@@ -121,11 +121,11 @@ http_interactions:
       Access-Control-Allow-Origin:
       - '*'
       Cf-Ray:
-      - a27d233f26206be
+      - a2859de31a8024c
     body:
       encoding: UTF-8
       string: '{"responseCode":200,"message":"success","content":{"username":"filp","name":null,"email":"dobreira@gmail.com","website":null,"time_zone":null,"account_type":"http:\/\/api.jotform.com\/system\/plan\/FREE","status":"ACTIVE","created_at":"2013-08-21
-        15:48:42","updated_at":"2013-08-23 07:24:32","usage":"http:\/\/api.jotform.com\/user\/usage","avatarURL":"http:\/\/www.gravatar.com\/avatar\/ab10f7908233dc830c5ece2a02154806?s=50&d=identicon"},"limit-left":988}'
+        15:48:42","updated_at":"2013-08-23 07:24:32","usage":"http:\/\/api.jotform.com\/user\/usage","avatarURL":"http:\/\/www.gravatar.com\/avatar\/ab10f7908233dc830c5ece2a02154806?s=50&d=identicon"},"limit-left":986}'
     http_version: 
-  recorded_at: Fri, 23 Aug 2013 12:31:41 GMT
+  recorded_at: Fri, 23 Aug 2013 14:04:17 GMT
 recorded_with: VCR 2.5.0
