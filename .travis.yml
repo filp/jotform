@@ -4,6 +4,5 @@ rvm:
   - 2.0.0
   - jruby-19mode
   - jruby-head
-  - ruby-head
 env:
   - JOTFORM_API_KEY=this_shouldnt_be_needed
