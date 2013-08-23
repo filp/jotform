@@ -11,9 +11,6 @@ module JotForm
     def all
       @data
     end
-
-    # Returns the full hash of details for the active user.
-    # @return [Hash, nil]
     alias_method :details, :all
 
     # Sets up this method to use the given API wrapper
