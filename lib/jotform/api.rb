@@ -70,6 +70,7 @@ module JotForm
     end
 
     def report(id)
+      Report.new(id)
     end
 
     def folder(id)

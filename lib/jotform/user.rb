@@ -1,13 +1,9 @@
 require "jotform/lazy_list"
-require "jotform/user/report"
+require "jotform/report"
 require "time"
 
 module JotForm
   class User < APIMethod
-    # Returns the full hash of details for the active user.
-    # @return [Hash, nil]
-    alias_method :details, :all
-
     # @return [LazyList]
     def reports
       @reports ||= LazyList.new(get("user/reports"), Report)
@@ -30,11 +26,6 @@ module JotForm
 
     def active?
       self.details["status"] == "ACTIVE"
-    end
-
-    # @return [String]
-    def username
-      self.details["username"]
     end
   end
 end

@@ -12,6 +12,18 @@ module JotForm
       @data
     end
 
+    # Returns the full hash of details for the active user.
+    # @return [Hash, nil]
+    alias_method :details, :all
+
+    # Sets up this method to use the given API wrapper
+    # 
+    # @param [JotForm::APIMethod]
+    def using_api(api)
+      @api = api
+      self
+    end
+
     # @return [Time]
     def created_at
       Time.parse(self.all["created_at"]) if self.all["created_at"]
@@ -22,14 +34,15 @@ module JotForm
       Time.parse(self.all["updated_at"]) if self.all["updated_at"]
     end
 
-    # Sets up this method to use the given API wrapper
-    # 
-    # @param [JotForm::APIMethod]
-    def using_api(api)
-      @api = api
-      self
-    end
+    # to-do: fix-up the camel-case/snake_case inconsistencies
+    # for less ugly code.
+    def method_missing(key, *args, &block)
+      unless @data[key]
+        raise ArgumentError, "Unknown property #{key} for #{self.class}"
+      end
 
+      @data[key]
+    end
   protected
     # Shortcut for performing a GET request
     # 
