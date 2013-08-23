@@ -9,17 +9,16 @@ http://api.jotform.com
 
 1. Add the gem to your `Gemfile`
 
-```ruby
-source "https://rubygems.org"
-
-gem "jotform"
-```
+  ```ruby
+  source "https://rubygems.org"
+  gem "jotform"
+  ```
 
 2. Install it
 
-```shell
-$ bundle install
-```
+  ```shell
+  $ bundle install
+  ```
 
 3. You're good to go!
 
