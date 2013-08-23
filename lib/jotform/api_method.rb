@@ -2,6 +2,26 @@ module JotForm
   class APIMethod
     attr_reader :api
 
+    # @param [Hash]
+    def initialize(data = nil)
+      @data = data
+    end
+
+    # @return [Hash, nil]
+    def all
+      @data
+    end
+
+    # @return [Time]
+    def created_at
+      Time.parse(self.all["created_at"]) if self.all["created_at"]
+    end
+
+    # @return [Time]
+    def updated_at
+      Time.parse(self.all["updated_at"]) if self.all["updated_at"]
+    end
+
     # Sets up this method to use the given API wrapper
     # 
     # @param [JotForm::APIMethod]
@@ -10,6 +30,7 @@ module JotForm
       self
     end
 
+  protected
     # Shortcut for performing a GET request
     # 
     # @param  [String] ns
