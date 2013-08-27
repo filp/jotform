@@ -15,7 +15,7 @@ module JotForm
       it { should respond_to(:time_zone) }
       it { should respond_to(:account_type) }
       it { should respond_to(:status) }
-      it { should respond_to(:avatarUrl) }
+      it { should respond_to(:avatar_url) }
       it { should respond_to(:company) }
 
       # sanityyyyy
