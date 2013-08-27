@@ -3,8 +3,7 @@ require "jotform/report"
 
 module JotForm
   describe User do
-    let(:api) { API.new(ENV["JOTFORM_API_KEY"]) }
-    let(:user) { api.user }
+    let(:user) { API.new(ENV["JOTFORM_API_KEY"]).user }
 
     describe "user properties" do
       subject { user }
