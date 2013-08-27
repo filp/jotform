@@ -64,6 +64,7 @@ module JotForm
     end
 
     def form(id)
+      Form.new(id: id).use_api(self)
     end
 
     def submission(id)
