@@ -1,24 +1,23 @@
 
 module JotForm
   class Form
+    has :id
+    has :username
+    has :title
+    has :height
+    has :url
+    has :status
+    has :new, alias: :unread_submissions
+    has :count, alias: :total_submissions
+
     def all
       @data ||= get("form/#{all['id']}")
       super
     end
 
-    # @return [Integer]
-    def unread_submissions
-      all["new"]
-    end
-
     # Are there any new, unread submissions for this form?
     def unread_submissions?
       unread_submissions > 0
-    end
-
-    # @return [Integer]
-    def submissions
-      all["count"]
     end
 
     def questions

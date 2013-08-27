@@ -4,6 +4,16 @@ require "time"
 
 module JotForm
   class User < APIMethod
+    has :username
+    has :name
+    has :email
+    has :website
+    has :time_zone
+    has :account_type
+    has :status
+    has :avatarUrl, alias: :avatar_url
+    has :company
+
     # @return [Array]
     def reports
       @reports ||= get("user/reports").map { |data| Report.new(data) }
