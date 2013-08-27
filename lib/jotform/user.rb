@@ -1,12 +1,11 @@
-require "jotform/lazy_list"
 require "jotform/report"
 require "time"
 
 module JotForm
   class User < APIMethod
-    # @return [LazyList]
+    # @return [Array]
     def reports
-      @reports ||= LazyList.new(get("user/reports"), Report)
+      @reports ||= get("user/reports").each { |data| Report.new(data) }
     end
 
     # Returns full usage details for the active user
