@@ -8,6 +8,7 @@ module JotForm
       #   class Form < APIMethod
       #     has :title
       #     has :align
+      #     has :uglyName, alias: :cool_name
       #     
       #     # ...
       #   end
