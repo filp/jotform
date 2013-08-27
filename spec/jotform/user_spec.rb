@@ -30,7 +30,7 @@ module JotForm
     end
 
     context "#active?" do
-      it "should return true for an active user" do
+      it "returns true for an active user" do
         VCR.use_cassette("user/details") do
           api.user.active?.should be_true
         end
