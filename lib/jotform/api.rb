@@ -60,7 +60,7 @@ module JotForm
 
     # @return [JotForm::User]
     def user
-      @user ||= User.new.using_api(self)
+      @user ||= User.new.use_api(self)
     end
 
     def form(id)

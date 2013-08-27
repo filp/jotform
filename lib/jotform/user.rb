@@ -1,11 +1,12 @@
 require "jotform/report"
+require "ostruct"
 require "time"
 
 module JotForm
   class User < APIMethod
     # @return [Array]
     def reports
-      @reports ||= get("user/reports").each { |data| Report.new(data) }
+      @reports ||= get("user/reports").map { |data| Report.new(data) }
     end
 
     # Returns full usage details for the active user
@@ -18,13 +19,19 @@ module JotForm
     #        "uploads": "0"
     #       }
     # 
-    # @return [Hash]
+    # @return [OpenStruct]
     def usage
-      @usage ||= get "user/usage"
+      @usage ||= OpenStruct.new(get("user/usage"))
     end
 
     def active?
-      self.details["status"] == "ACTIVE"
+      self.all["status"] == "ACTIVE"
+    end
+
+    # decorate #all to load user data on-demand
+    def all 
+      @data ||= get("user")
+      super
     end
   end
 end

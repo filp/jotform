@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.jotform.com/v1/user/reports?apiKey=<apiKey>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.jotform.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Aug 2013 09:32:40 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - PHPSESSID=ammn1jt9kbp5rh84fl43mqb097; path=/
+      - __cfduid=dd8327003107bbcfdd8f596e98e1c032f1377595960193; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.jotform.com
+      - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
+      - guest=guest_32382636951055; expires=Fri, 27-Sep-2013 09:32:40 GMT; path=/
+      - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
+      - theme=tile-black; expires=Fri, 27-Sep-2013 09:32:40 GMT; path=/
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      Expires:
+      - Thu, 01 Jan 1970 00:00:01 GMT
+      Last-Modified:
+      - Tue, 27 Aug 2013 09:32:40 GMT
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      X-Form-Cache:
+      - MISS
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Cf-Ray:
+      - a47c17f372a024c
+    body:
+      encoding: UTF-8
+      string: '{"responseCode":200,"message":"success","content":[{"id":"32381989354062","form_id":"32382056214851","title":"Excel
+        Report","fields":"ip,dt,4","list_type":"excel","status":"ENABLED","url":"http:\/\/www.jotform.com\/excel\/32381989354062","isProtected":false,"settings":"","created_at":"2013-08-27
+        05:28:35","updated_at":null}],"limit-left":1000}'
+    http_version: 
+  recorded_at: Tue, 27 Aug 2013 09:32:40 GMT
+recorded_with: VCR 2.5.0

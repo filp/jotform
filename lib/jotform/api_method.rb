@@ -11,12 +11,11 @@ module JotForm
     def all
       @data
     end
-    alias_method :details, :all
 
     # Sets up this method to use the given API wrapper
     # 
     # @param [JotForm::APIMethod]
-    def using_api(api)
+    def use_api(api)
       @api = api
       self
     end

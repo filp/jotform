@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.jotform.com/v1/user/usage?apiKey=<apiKey>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.jotform.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - cloudflare-nginx
+      Date:
+      - Tue, 27 Aug 2013 09:39:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - PHPSESSID=r6qusdeugoaalfl9fpfn4vtcs5; path=/
+      - __cfduid=d86458917f0073f2f75a3c81ec8eeb7cd1377596386006; expires=Mon, 23-Dec-2019
+        23:50:00 GMT; path=/; domain=.jotform.com
+      - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - guest=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
+      - guest=guest_32382236314044; expires=Fri, 27-Sep-2013 09:39:46 GMT; path=/
+      - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+      - theme=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.jotform.com
+      - theme=tile-black; expires=Fri, 27-Sep-2013 09:39:46 GMT; path=/
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      Expires:
+      - Thu, 01 Jan 1970 00:00:01 GMT
+      Last-Modified:
+      - Tue, 27 Aug 2013 09:39:46 GMT
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      X-Form-Cache:
+      - MISS
+      Access-Control-Allow-Methods:
+      - PUT, POST, GET, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - '*'
+      Cf-Ray:
+      - a47cbe48726024c
+    body:
+      encoding: UTF-8
+      string: '{"responseCode":200,"message":"success","content":{"submissions":"2","ssl_submissions":"0","payments":"0","uploads":"0"},"limit-left":999}'
+    http_version: 
+  recorded_at: Tue, 27 Aug 2013 09:39:46 GMT
+recorded_with: VCR 2.5.0
