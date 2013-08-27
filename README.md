@@ -30,7 +30,6 @@ require "jotform"
 jotform = JotForm::API.new(ENV['YOUR_API_KEY'])
 
 # Load the active user, and get its details:
-
 user = jotform.user
 user.active? # => true
 user.usage.submissions # => int
