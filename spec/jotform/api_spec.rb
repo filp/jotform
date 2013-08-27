@@ -19,7 +19,7 @@ module JotForm
       end
     end
 
-    context ".user" do
+    context "#user" do
       it "should return a User instance" do
         api.user.should be_instance_of(User)
       end
