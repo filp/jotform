@@ -5,8 +5,9 @@ module JotForm
   describe User do
     let(:user) { API.new(ENV["JOTFORM_API_KEY"]).user }
 
+    subject { user }
+    
     describe "user properties" do
-      subject { user }
 
       it { should respond_to(:username) }
       it { should respond_to(:name) }
