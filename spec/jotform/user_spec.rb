@@ -4,11 +4,29 @@ require "jotform/report"
 module JotForm
   describe User do
     let(:api) { API.new(ENV["JOTFORM_API_KEY"]) }
+    let(:user) { api.user }
+
+    describe "user properties" do
+      subject { user }
+
+      it { should respond_to(:username) }
+      it { should respond_to(:name) }
+      it { should respond_to(:email) }
+      it { should respond_to(:website) }
+      it { should respond_to(:time_zone) }
+      it { should respond_to(:account_type) }
+      it { should respond_to(:status) }
+      it { should respond_to(:avatarUrl) }
+      it { should respond_to(:company) }
+
+      # sanityyyyy
+      it { should_not respond_to(:bears_slain) }
+    end
 
     context "#reports" do
       it "returns a list of reports for the active user" do
         VCR.use_cassette("user/reports") do
-          reports = api.user.reports
+          reports = user.reports
 
           reports.should be_a(Array)
           reports.first.should be_a(Report)
@@ -19,7 +37,7 @@ module JotForm
     context "#usage" do
       it "returns usage details for the active user" do
         VCR.use_cassette("user/usage") do
-          usage = api.user.usage
+          usage = user.usage
 
           usage.should respond_to(:submissions)
           usage.should respond_to(:ssl_submissions)
@@ -32,7 +50,7 @@ module JotForm
     context "#active?" do
       it "returns true for an active user" do
         VCR.use_cassette("user/details") do
-          api.user.active?.should be_true
+          user.active?.should be_true
         end
       end
     end
