@@ -1,6 +1,7 @@
+require "jotform/api_method"
 
 module JotForm
-  class Form
+  class Form < APIMethod
     has :id
     has :username
     has :title

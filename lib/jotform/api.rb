@@ -70,7 +70,7 @@ module JotForm
     end
 
     def report(id)
-      Report.new(id: id)
+      Report.new(id: id).use_api(self)
     end
 
     def folder(id)
