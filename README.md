@@ -22,16 +22,26 @@ http://api.jotform.com
 
 3. You're good to go!
 
-## Example:
-
-(I'll update this once there's some more to show)
+## Usage:
 
 ```ruby
 require "jotform"
 
-jotform = JotForm::API.new(api_key)
-jotform.user.username #=> "filp"
-jotform.user.valid?   #=> true
+jotform = JotForm::API.new(ENV['YOUR_API_KEY'])
+
+# Load the active user, and get its details:
+
+user = jotform.user
+user.active? # => true
+user.usage.submissions # => int
+# ...
+
+
+# Load a user's reports:
+user.reports.each do |report|
+  puts "#{report.title}: #{report.url}" if report.enabled?
+end
+
 ```
 
 ## Contributing:

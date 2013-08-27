@@ -30,6 +30,13 @@ module JotForm
       Time.parse(self.all["updated_at"]) if self.all["updated_at"]
     end
 
+    # the jotform API has a couple different formats for status, this
+    # method + alias combines them into a more consistent interface.
+    def enabled?
+      self.all["status"] && ["ACTIVE", "ENABLED"].include?(self.all["status"])
+    end
+    alias_method :active?, :enabled?
+
     # to-do: fix-up the camel-case/snake_case inconsistencies
     # for less ugly code.
     def method_missing(key, *args, &block)

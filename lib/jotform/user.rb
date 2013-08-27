@@ -24,10 +24,6 @@ module JotForm
       @usage ||= OpenStruct.new(get("user/usage"))
     end
 
-    def active?
-      self.all["status"] == "ACTIVE"
-    end
-
     # decorate #all to load user data on-demand
     def all 
       @data ||= get("user")
